@@ -1,0 +1,50 @@
+﻿@page
+@model books_management_system.Pages.books.CreateModel
+
+<h2>Add New Book</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Books.title" class="form-label">Title</label>
+        <input asp-for="Books.title" class="form-control" />
+        <span asp-validation-for="Books.title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Books.author" class="form-label">Author</label>
+        <input asp-for="Books.author" class="form-control" />
+        <span asp-validation-for="Books.author" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Books.description" class="form-label">Description</label>
+        <textarea asp-for="Books.description" class="form-control"></textarea>
+        <span asp-validation-for="Books.description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Books.publisher" class="form-label">Publisher</label>
+        <input asp-for="Books.publisher" class="form-control" />
+        <span asp-validation-for="Books.publisher" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Books.status" class="form-label">Status</label>
+        <input asp-for="Books.status" class="form-control" />
+        <span asp-validation-for="Books.status" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Books.category" class="form-label">Category</label>
+        <input asp-for="Books.category" class="form-control" />
+        <span asp-validation-for="Books.category" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save Book</button>
+    <a asp-page="/books/Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
